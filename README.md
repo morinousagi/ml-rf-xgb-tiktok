@@ -1,6 +1,9 @@
-# Google Advance Data Analytics Course 6 project: Classifying TikTok videos using machine learning
+# Google Advance Data Analytics Course 6 project:
+
+Classifying TikTok videos using machine learning
 
 To develop a model to predict whether a TikTok video presents a 'claim' or an 'opinion'.
+
 - A claim requires further human intervention.
 - An opinion does not require human intervention.
 - A claim that is misclassified as an opinion is highly undesirable.
@@ -8,13 +11,16 @@ To develop a model to predict whether a TikTok video presents a 'claim' or an 'o
 Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
 
 **Target variable**
+
 - 'claim_status': identifies which are 'claim' videos for further human intervention.
 
 **Evaluation**
+
 - Minimal false negatives i.e. misclassifying a claim as opinion
 - Important model evaluation metric, recall = TP / (TP+FN)
 
 **EDA - not displayed in the Jupyter Notebook**
+
 - data.head(10)
 - data.shape
 - data.info()
@@ -24,6 +30,7 @@ Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
 Tree-based models can handle outliers well.
 
 **Contents of gada-project-tiktok.ipynb**
+
 - Feature engineering
 - Split data
 - Random forest model
@@ -34,12 +41,14 @@ Tree-based models can handle outliers well.
 - Feature importances of champion model
 
 **Data dictionary**
+
 Dataset: tiktok_dataset.csv
 - contains synthetic data created for this project in partnership with TikTok
 - **19,383 rows** – each row represents a different published TikTok video in which a claim/opinion has been made
 - **12 columns** - as shown below
 
 | Column name | Type | Description |
+| ------------- | ------------- | ------------- | 
 | # | int | TikTok assigned number for video with claim/opinion |
 | claim_status | obj | Whether the published video has been identified as an “opinion” or a “claim.” In this dataset, an “opinion” refers to an individual’s or group’s personal belief or thought. A “claim” refers to information that is either unsourced or from an unverified source. |
 | video_id  | int | Random identifying number assigned to video upon publication on TikTok |
