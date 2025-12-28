@@ -1,5 +1,4 @@
-# Google Advance Data Analytics Course 6 project:
-## Classifying TikTok videos using machine learning
+# Google Advance Data Analytics Course 6 project: ## Classifying TikTok videos using machine learning
 
 To develop a model to predict whether a TikTok video presents a 'claim' or an 'opinion'.
 
@@ -9,7 +8,7 @@ To develop a model to predict whether a TikTok video presents a 'claim' or an 'o
 
 Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
 
-### **Target variable**
+### Target variable
 
 - 'claim_status': identifies which are 'claim' videos for further human intervention.
 
@@ -18,7 +17,7 @@ Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
 - Minimal false negatives i.e. misclassifying a claim as opinion
 - Important model evaluation metric, recall = TP / (TP+FN)
 
-### *EDA - not displayed in the Jupyter Notebook**
+### **EDA - not displayed in the Jupyter Notebook**
 
 - data.head(10)
 - data.shape
