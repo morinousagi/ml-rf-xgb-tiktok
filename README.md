@@ -12,7 +12,7 @@ Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
 
 ### Target variable
 
-- *'claim_status'*: identifies which are 'claim' videos for further human intervention.
+- ***claim_status***: identifies which are 'claim' videos for further human intervention.
 
 ### Evaluation
 
