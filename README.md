@@ -1,6 +1,5 @@
 # Google Advance Data Analytics Course 6 project:
-
-Classifying TikTok videos using machine learning
+## Classifying TikTok videos using machine learning
 
 To develop a model to predict whether a TikTok video presents a 'claim' or an 'opinion'.
 
