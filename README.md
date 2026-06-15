@@ -1,45 +1,66 @@
-## Google Advance Data Analytics Course 6 project:
-## Classifying TikTok videos using machine learning
+# Classifying TikTok videos using machine learning
 
-To develop a model to predict whether a TikTok video presents a 'claim' or an 'opinion'.
+(Google Advance Data Analytics Course 6)
 
-- A claim requires further human intervention.
-- An opinion does not require human intervention.
-- A claim that is misclassified as an opinion is highly undesirable.
+## Project
+To develop a model to predict whether a TikTok video presents a `claim` or an `opinion`.
 
-Therefore, the aim would be identifying a 'claim' video as a 'positive' outcome.
+- A `claim` requires further human intervention.
+- An `opinion` does not require human intervention.
+- A `claim` that is misclassified as an `opinion` is highly undesirable.
 
-### Target variable
+Therefore, the aim would be identifying a `claim` video as a `positive` outcome.
 
-- ***claim_status***: identifies which are 'claim' videos for further human intervention.
+## Target variable
 
-### Evaluation
+- ***claim_status***: identifies which are `claim` videos for further human intervention.
+
+## Evaluation approach
 
 - Minimal false negatives i.e. misclassifying a claim as opinion
-- Important model evaluation metric, recall = TP / (TP+FN)
+- Important model evaluation metric, Recall = TP / (TP+FN)
 
-### EDA - not displayed in the Jupyter Notebook
+## EDA
 
+Not displayed in the Jupyter Notebook
+```
 - data.head(10)
 - data.shape
 - data.info()
 - data.describe()
 - data.isnull().sum()
+```
+Explored outliers using box plots. In social network or security threat datasets, outliers could be crucial in anomaly detection. Therefore, there is no handling of outliers in this dataset. Tree-based models can handle outliers well.
 
-Tree-based models can handle outliers well.
+Additional viz: [Tableau](https://public.tableau.com/app/profile/morinousagi/viz/Courseproject_17585318018580/Story1)
 
-### Contents of gada-project-tiktok.ipynb
+## Contents of `gada-project-tiktok.ipynb`
 
-- Feature engineering
-- Split data
-- Random forest model
-- XGBoost model
-- Evaluate random forest model
-- Evaluate XGBoost model
+### Feature engineering
+- Feature creation: char length of `video_transcription_text`
+- Feature encoding: dummy encode categorical values
+- Feature selection: drop unnecessary columns 
+
+### Split data
+- training/validation/testing: 60/20/20
+- `stratify=y` even though classes are balanced
+
+### Models: Random Forest & XGBoost
+- GridSearchCV, refit=`recall`
+- Hyperparameters tuning
+
+### Evaluation
+- Confusion Matrix
+- classification_report
+
+Both models offer almost the same performance, with rf_cv performs slightly better than xgb_cv.
+To explore more features to potentially lower false negatives further.
+
 - Use champion model to predict on test data
 - Feature importances of champion model
 
-### Data dictionary
+
+## Data dictionary
 
 Dataset: *tiktok_dataset.csv*
 - contains synthetic data created for this project in partnership with TikTok
